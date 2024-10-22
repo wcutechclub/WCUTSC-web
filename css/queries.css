@@ -1,0 +1,108 @@
+/* Bellow 1200px (Land scape Tablets) */
+@media(max-width: 75em){
+    .section-title{
+        font-size: 1.5rem;
+    }
+
+    .benefits{
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .benefit-container{
+        padding: 2rem;
+    }
+
+    .courses-container{
+        width: 80%;
+    }
+
+    .course-image{
+         height: 12rem;
+    }
+
+    .cta-text{
+        font-size: 1.5rem;
+    }
+
+    .page-nav__items{
+        width: 55rem;
+    }
+
+    .overview-container{
+        gap: 8rem;
+    }
+
+}
+
+/* Bellow 944px (Tablets) */
+
+@media(max-width: 59em){
+    .header-main__text{
+        font-size: 3.8rem;
+    }
+
+    .page-nav__items{
+        width: 50rem;
+    }
+
+    .benefits{
+        padding: 2rem 2rem;
+    }
+
+    .overview-container{
+        gap: 6rem;
+    }
+
+    .cta-text{
+        font-size: 1.3rem;
+    }
+}
+
+
+/* Bellow 850px (Tablets) */
+
+@media(max-width: 52em){
+    .page-nav__items{
+        width: 40rem;
+    }
+
+    .header-main__text{
+        font-size: 3rem;
+    }
+
+    .header-container{
+        width: 40rem;
+    }
+
+    .benefits{
+        padding: 2rem 0rem;
+    }
+
+    .benefit-title{
+        font-size: 1rem;
+    }
+
+    .overview-container{
+        gap: 5rem;
+    }
+
+    .num-text{
+        font-size: 3rem;
+    }
+
+    .courses-container{
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding: 2rem 3rem;
+        gap: 1.2rem;
+    }
+
+    .course-image{
+        width: 60%;
+    }
+
+    .cta-text{
+        font-size: 1.2rem;
+    }
+
+}
