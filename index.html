@@ -8,17 +8,18 @@
     <link rel="stylesheet" href="css/queries.css">
 </head>
 <body>
-    <header>
-        <nav  class="nav-container">
+    <header class="header">
+        <nav  class="nav-container sticky">
             <div class="main-nav">
                 <a class="logo-text" href="#">WCUTSC</a>
                 <a class="logo-text" href="#">Join Now</a>
             </div>
-            <div class=" page-nav__items">
+            <div class="page-nav__items">
                 <ul>
                     <li class="nav-items"><a href="#">Home</a></li>
-                    <li class="nav-items"><a href="#">Explore</a></li>
-                    <li class="nav-items"><a href="#">Learning</a></li>
+                    <li class="nav-items"><a href="#explore">Explore</a></li>
+                    <li class="nav-items"><a href="#courses">Courses</a></li>
+                    <li class="nav-items"><a href="#overview">Overview</a></li>
                 </ul>
             </div>
         </nav>
@@ -33,7 +34,7 @@
             </div>
         </div>
     </header>
-    <section class="explore-section">
+    <section id="explore" class="explore-section">
         <h2 class="section-title">Here's why you should become a member</h2>
         <div class="benefits">
             <div class="benefit-container">
@@ -81,28 +82,29 @@
             </div>
         </div>
     </section>
-    <section class="overview-section">
+    <section id="overview" class="overview-section">
         <h2 class="section-title bright-title">Club overview</h2>
         <div class="overview-container">
             <div class="number-container">
-                <h3 class="num-text">12</h3>
+                <h3 class="num-text new-members__num">0</h3>
                 <p class="overview-text">New members</p>
             </div>
             <div class="number-container">
-                <h3 class="num-text">42</h3>
+                <h3 class="num-text total-members__num">0</h3>
                 <p class="overview-text">Total members</p>
             </div>
             <div class="number-container">
-                <h3 class="num-text">4</h3>
+                <h3 class="num-text dep-num">0</h3>
                 <p class="overview-text">Departments</p>
             </div>
             <div class="number-container">
-                <h3 class="num-text">12&plus;</h3>
-                <p class="overview-text">Projects</p>
+                <h3 class="num-text proj-num">0</h3>
+                    <span class="plus-sign">&plus;</span>
+                    <p class="overview-text">Projects</p>
             </div>
         </div>
     </section>
-    <section class="courses-section">
+    <section id="courses" class="courses-section">
         <h2 class="section-title">Courses we have</h2>
         <div class="courses-container">
             <img class="course-image" src="images/related-3.jpg" alt="Web prgrammin course image.">
@@ -136,5 +138,6 @@
     <footer>
 
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

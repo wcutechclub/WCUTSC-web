@@ -28,27 +28,70 @@ allLinks.forEach(function (link) {
   });
 } );
 
-// // Sticky Nacigation
+// Sticky Nacigation
 
-// const nav = document.querySelector( '.page-nav__items' );
+const nav = document.querySelector( '.page-nav__items' );
+const mainNav = document.querySelector('.nav-container')
 
-// const stickyNav = function ( entries ) {
-//     const [ entry ] = entries;
-//     console.log(entry);
-//   if ( !entry.isIntersecting ) {
-//     nav.classList.add( 'sticky' )
-//   }
-//   else {
-//     nav.classList.remove('sticky')
-//   }
-// }
+const stickyNav = function ( entries ) {
+    const [ entry ] = entries;
+  if ( !entry.isIntersecting ) {
+    nav.classList.add( 'sticky' );
+    mainNav.classList.add( 'sticky' );
 
-// const navHeight = nav.getBoundingClientRect().height;
+  }
+  else {
+    nav.classList.remove( 'sticky' );
+    mainNav.classList.add( 'sticky' );
+  }
+}
 
-// const header = document.querySelector( '.header' );
-// const headerObserver = new IntersectionObserver( stickyNav, {
-//   root: null,
-//   threshold: 0,
-//   rootMargin: `-${navHeight}px`
-// } );
+const navHeight = nav.getBoundingClientRect().height;
 
+const header = document.querySelector( '.header' );
+const headerObserver = new IntersectionObserver( stickyNav, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${navHeight}px`
+} );
+
+headerObserver.observe( header );
+
+// Increasing Overview Number
+
+
+const overviewSection = document.querySelector( '.overview-section' )
+
+const newMembers = document.querySelector('.new-members__num')
+const totalMembers = document.querySelector('.total-members__num')
+const depNum = document.querySelector('.dep-num')
+const projNum = document.querySelector( '.proj-num' )
+
+const animaCount = function ( targetId, targetValue ) {
+  let currentValue = 0;
+  const UpdateInterval = setInterval( () => {
+    currentValue += 1;
+    if ( currentValue >= targetValue ) {
+      currentValue = targetValue;
+      clearInterval( UpdateInterval );
+    }
+    targetId.textContent = currentValue;
+  }, 50 )
+}
+
+const increasNums = function ( entries ) {
+    const [ entry ] = entries;
+  if ( entry.isIntersecting ) {
+    animaCount(newMembers, 26)
+    animaCount(totalMembers, 42)
+    animaCount(depNum, 4)
+    animaCount(projNum, 10)
+  }
+}
+
+const overviewObserver = new IntersectionObserver( increasNums, {
+  root: null,
+  threshold: 0,
+} );
+
+overviewObserver.observe( overviewSection );
