@@ -30,6 +30,15 @@ header{
     border: #fff solid 1px;
 }
 
+.page-nav__items.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(8, 8, 77, 0.8);
+    z-index: 1000;
+}
+
 .page-nav__items ul{
     list-style: none;
     display: flex;
@@ -50,7 +59,6 @@ header{
 .header-main__text{
     font-size: 4rem;
     text-align: center;
-    /* line-height: 1; */
 }
 
 .header-main__text span{
@@ -134,7 +142,7 @@ header{
 /* Overview Section */
 .overview-section{
     background-color: rgb(8, 8, 77);
-    padding: 2rem 4rem;
+    padding: 4rem 4rem;
 }
 
 .bright-title{
@@ -153,22 +161,47 @@ header{
     font-size: 4rem;
 }
 
-/* Course Section */
-.courses-section{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.proj-num{
+    display: inline;
 }
 
-.courses-container{
-    display: grid;
-    grid-template-columns: 1fr 4fr;
+.plus-sign{
+    display: inline;
+    font-size: 4rem;
+    font-family: bold;
+}
+
+/* Course Section */
+
+.courses-section{
+    padding: 4rem 0;
+}
+
+.slider {
+  max-width: 70rem;
+  height: 20rem;
+  margin: 0 auto;
+  position: relative;
+
+  /* IN THE END */
+  overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 20rem;
+
+    display: flex;
     align-items: center;
+    justify-content: center;
+
     gap: 2rem;
-    width: 60%;
-    padding: 2rem 4rem;
-    box-shadow: 0 4px 20px rgb(0, 0, 0, 0.5);
-    border-radius: 12px;
+
+  /* THIS creates the animation! */
+    transition: transform 1s;
+
+    padding: 0 8rem;
 }
 
 .course-image{
@@ -185,6 +218,65 @@ header{
 .course-text{
     font-size: 1.2rem;
     margin-bottom: 2rem;
+}
+
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+
+  border: none;
+  background: rgba(255, 255, 255, 0.7);
+  font-family: inherit;
+  color: #333;
+  border-radius: 50%;
+  height: 5.5rem;
+  width: 5.5rem;
+  font-size: 3.25rem;
+  cursor: pointer;
+}
+
+.slider__btn--left {
+  left: 6%;
+  transform: translate(-50%, -50%);
+}
+
+.slider__btn--right {
+  right: 6%;
+  transform: translate(50%, -50%);
+}
+
+.dots {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dots__dot {
+  border: none;
+  background-color: #b9b9b9;
+  opacity: 0.7;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  margin-right: 1.75rem;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  /* Only necessary when overlying images */
+  /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
+}
+
+.dots__dot:last-child {
+  margin: 0;
+}
+
+.dots__dot--active {
+  /* background-color: #fff; */
+  background-color: rgb(8, 8, 77, 0.7);
+  opacity: 1;
 }
 
 /* CTA section */
@@ -213,5 +305,7 @@ header{
 
 /* Footer Section */
 footer{
-    height: 10rem   ;
+    height: 10rem;
+    background-color: rgb(8, 8, 77);
+    border-top: 1px solid rgba(0, 255, 255, 0.404);
 }
