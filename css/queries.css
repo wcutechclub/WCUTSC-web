@@ -12,14 +12,6 @@
         padding: 2rem;
     }
 
-    .courses-container{
-        width: 80%;
-    }
-
-    .course-image{
-         height: 12rem;
-    }
-
     .cta-text{
         font-size: 1.5rem;
     }
@@ -34,8 +26,13 @@
 
 }
 
-/* Bellow 944px (Tablets) */
+@media(max-width: 70em){
+    .slider{
+        width: 60rem;
+    }
+}
 
+/* Bellow 944px (Tablets) */
 @media(max-width: 59em){
     .header-main__text{
         font-size: 3.8rem;
@@ -55,6 +52,18 @@
 
     .cta-text{
         font-size: 1.3rem;
+    }
+
+    .footer-container{
+        padding: 2rem;
+    }
+
+    .slider{
+        width: 50rem;
+    }
+
+    .slide{
+        padding: 0 5rem;
     }
 }
 
@@ -90,19 +99,240 @@
         font-size: 3rem;
     }
 
-    .courses-container{
-        grid-template-columns: 1fr;
-        justify-items: center;
-        padding: 2rem 3rem;
-        gap: 1.2rem;
+    .plus-sign{
+        font-size: 3rem;
     }
 
-    .course-image{
-        width: 60%;
+    .slider{
+        width: 45rem;
     }
 
     .cta-text{
         font-size: 1.2rem;
     }
 
+    .footer-container{
+        padding: 2rem 1rem;
+    }
+
+}
+
+/* Bellow 704px (Smaller Tablets) */
+
+@media(max-width: 44em){
+    .page-nav__items{
+        width: 30rem;
+    }
+
+    .page-nav__items ul{
+        gap: 4rem;
+    }
+
+    .header-main__text{
+        font-size: 2.2rem;
+    }
+
+    .header-container{
+        width: 30rem;
+    }
+
+    .header-second__text{
+        font-size: 1rem;
+    }
+
+    .benefit-container{
+        padding: 1rem;
+    }
+
+    .overview-container{
+        gap: 2.8rem;
+    }
+
+    .overview-text{
+        font-size: 0.8rem;
+    }
+
+    .num-text{
+        font-size: 2rem;
+    }
+
+    .plus-sign{
+        font-size: 1.6rem;
+    }
+
+    .cta-text{
+        font-size: 1rem;
+    }
+
+    .header-cta__btn{
+        padding: 0.5rem 0.8rem;
+        font-size: 1.2rem;
+    }
+
+    .slider{
+        width: 34rem;
+    }
+
+    .slide{
+        padding: 0 3rem;
+    }
+
+    .course-title{
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .course-text{
+        font-size: 1rem;
+        line-height: 1.4rem;
+    }
+
+    .slider__btn{
+        height: 3rem;
+        width: 3rem;
+        font-size: 2rem;
+    }
+
+    .footer-container{
+        /* padding: 2rem; */
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 4rem;
+    }
+
+    .footer-message{
+        font-size: 0.8rem;
+        grid-column: 2;
+    }
+
+}
+
+/* Bellow 544px (Phones) */
+
+@media(max-width: 34em){
+    .header-container{
+        width: 100%;
+        margin: 1rem auto;
+    }
+
+    .page-nav__items{
+        width: 90%;
+        margin-bottom: 2rem;
+    }
+
+    .page-nav__items ul{
+        gap: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .header-main__text{
+        font-size: 1.8rem;
+    }
+
+    .header{
+        padding: 1rem;
+    }
+
+    .main-nav{
+        margin-bottom: 2rem;
+    }
+
+    .header-second__text{
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+
+    .section-title{
+        margin: 2rem;
+        font-size: 1.4rem;
+    }
+
+    .benefits{
+        grid-template-columns: 1fr;
+    }
+
+    .overview-container{
+        gap: 1.8rem;
+    }
+
+    .num-text{
+        font-size: 1.2rem;
+    }
+
+    .plus-sign{
+        font-size: 1rem;
+    }
+
+    .overview-section{
+        padding: 1rem 2rem;
+    }
+
+    .overview-text{
+        font-size: 0.5rem;
+    }
+
+    .cta-action{
+        padding: 2rem 0.5rem;
+    }
+
+    .cta-text{
+        font-size: 0.8rem;
+    }
+
+    .cta-section__btn{
+        font-size: 1rem;
+    }
+
+    .slider{
+        width: 100%;
+        height: 28rem;
+    }
+
+    .slide{
+        padding: 0 1rem;
+        height: 28rem;
+    }
+
+    .slider__btn{
+        font-size: 1.4rem;
+    }
+
+    .course-title{
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .course-text{
+        font-size: 1rem;
+        line-height: 1.4rem;
+    }
+
+    .footer-container{
+        align-items: flex-start;
+        padding: 2rem;
+        /* grid-template-rows: repeat(3, 1fr); */
+        grid-template-columns: 1fr;
+    }
+
+    .social-links__container{
+        grid-row: 2;
+        margin-top: 1rem;
+    }
+
+    svg{
+        width: 1rem;
+        height: 1rem;
+    }
+
+    footer h5{
+        text-align: center;
+    }
+
+    .footer-message{
+        font-size: 0.8rem;
+        grid-column: 1;
+        grid-row: 0;
+        margin-top: 1rem;
+    }
 }
